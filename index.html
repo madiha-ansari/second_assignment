@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden { display: none; }
+        table { width: 100%; border-collapse: collapse; }
+        table, th, td { border: 1px solid black; }
+        th, td { padding: 8px; text-align: left; }
+        .btn { cursor: pointer; padding: 5px; }
+        .edit-btn { background-color: yellow; }
+        .delete-btn { background-color: red; color: white; }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Create a signup form and display form data in your web 
+    page on submission -->
+  
+    <!-- form start -->
+
+    <!-- <form action="" method="post" onsubmit="getValues(event)" style=" width: 725px; margin-left: 265px;">
+        <fieldset style="border: 2px solid black; margin: 10px;"> -->
+            <!-- form head start  -->
+            <!-- <legend style="text-align: center;">
+                <h2>Signup Form</h2>
+            </legend> -->
+            <!-- form head end  -->
+
+            <!-- first name -->
+            <!-- <label for="name"><strong style="font-size: 18px;">First Name:</strong></label><br>
+            <input id="name" type="text" name="first-name" placeholder="Enter Your First name" required
+                style="width: 600px; height: 20px;"> -->
+
+            <!-- last name -->
+            <!-- <br><br>
+            <label for="last-name"><strong style="font-size: 18px;">Last Name:</strong></label><br>
+            <input id="last-name" type="text" name="last-name" placeholder="Enter Your Last name" required
+                style="width: 600px; height: 20px;">
+
+            <!-- email address -->
+
+            <!-- <br><br>
+            <label for="Email"><strong style="font-size: 18px;">Email Address:</strong></label><br>
+            <input id="Email" type="email" name="email" placeholder="Enter Your Email" required -->
+         <!-- style="width: 600px; height: 20px;">  -->
+
+            <!-- password -->
+            <!-- <br><br>
+            <label for="password"><strong style="font-size: 18px;">Password:</strong></label><br>
+            <input id="password" type="password" maxlength="15" name="password" placeholder="Enter Your Password"
+                style="width: 600px; height: 20px;">
+
+                <br><br>
+                <button type="reset">Reset</button>
+              <button type="submit">Submit</button>
+        </fieldset>
+    </form>-->
+
+    <!-- <div id="formData"></div> -->
+    <!-- form end -->
+
+    <!-- 2. Suppose in your webpage there is content area in which 
+you have entered your item details, but user can only see 
+some details on first look. When user clicks on “Read 
+more” button, full detail of that particular item will be 
+displayed. -->
+
+
+<!------------------ question-2 ------------------------------>
+<!-- <h1 style="text-align: center;">Story</h1>
+<p id="story">In a small town nestled between rolling hills, lived a young girl named Lily. She loved flying kites, and every weekend, she would race to the park with her favorite bright red kite. One sunny Saturday, as she prepared for another day of kite flying, she noticed an elderly man sitting alone on a bench, looking wistfully at the sky. <br><br>
+    The man, Mr. Thompson, was known to the townspeople as a kind soul who had once been a renowned kite maker. However, he hadn't flown a kite in years due to his declining health. Lily, always keen to share her joy, approached Mr. Thompson with a smile.<br><br>
+    “Hello, Mr. Thompson! Would you like to see my kite fly?” she asked.
+ <a href="JavaScript:void(0)" onclick="readMore()">Read More</a>
+</p> -->
+
+
+<!-- 3. In previous assignment you have created a tabular data 
+using javascript. Let’s modify that. Create a form which 
+takes student’s details and show each student detail in 
+table. Each row of table must contain a delete button and 
+an edit button. On click on delete button entire row should 
+be deleted. On click on edit button, a hidden form will 
+appear with the values of that row -->
+
+<h1>Student Details Form</h1>
+<form id="studentForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    <label for="age">Age:</label>
+    <input type="number" id="age" required>
+    <label for="grade">Grade:</label>
+    <input type="text" id="grade" required>
+    <button type="submit">Add Student</button>
+</form>
+
+<h2>Student List</h2>
+<table id="studentTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Rows will be added here dynamically -->
+    </tbody>
+</table>
+
+<div id="editForm" class="hidden">
+    <h2>Edit Student</h2>
+    <form id="editStudentForm">
+        <input type="hidden" id="editRowIndex">
+        <label for="editName">Name:</label>
+        <input type="text" id="editName" required>
+        <label for="editAge">Age:</label>
+        <input type="number" id="editAge" required>
+        <label for="editGrade">Grade:</label>
+        <input type="text" id="editGrade" required>
+        <button type="submit">Save Changes</button>
+        <button type="button" id="cancelEdit">Cancel</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
